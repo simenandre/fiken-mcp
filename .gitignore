@@ -1,0 +1,9 @@
+# Build output
+fiken-mcp-server
+
+# Go test cache and binaries
+*.test
+*.out
+
+# OS-specific
+.DS_Store
