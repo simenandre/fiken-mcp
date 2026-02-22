@@ -22,6 +22,10 @@ func main() {
 		"fiken-mcp-server",
 		"1.0.0",
 		server.WithToolCapabilities(true),
+		server.WithInstructions("This is an accounting MCP server that integrates with Fiken, a Norwegian accounting system. "+
+			"When working with financial data, you must ensure all numbers are correct. "+
+			"Always verify amounts, quantities, and calculations either by using code to compute them or by referencing the exact values returned from the MCP tools. "+
+			"Never guess or approximate financial figures."),
 	)
 
 	tools.RegisterAll(s, client)
