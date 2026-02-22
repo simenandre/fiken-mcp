@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/simenandre/fiken-mcp-server/internal/fiken"
+	"github.com/simenandre/fiken-mcp/internal/fiken"
 )
 
 const testCompanySlug = "fiken-demo-lastebil-og-slott-as1"

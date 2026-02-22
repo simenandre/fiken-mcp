@@ -2,7 +2,7 @@ package tools
 
 import (
 	"github.com/mark3labs/mcp-go/server"
-	"github.com/simenandre/fiken-mcp-server/internal/fiken"
+	"github.com/simenandre/fiken-mcp/internal/fiken"
 )
 
 // RegisterAll registers all Fiken tools with the MCP server.
