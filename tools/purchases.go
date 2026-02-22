@@ -6,7 +6,7 @@ import (
 
 	"github.com/mark3labs/mcp-go/mcp"
 	"github.com/mark3labs/mcp-go/server"
-	"github.com/simenandre/fiken-mcp-server/internal/fiken"
+	"github.com/simenandre/fiken-mcp/internal/fiken"
 )
 
 func registerPurchaseTools(s *server.MCPServer, client *fiken.Client) {

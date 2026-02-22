@@ -6,8 +6,8 @@ import (
 	"os"
 
 	"github.com/mark3labs/mcp-go/server"
-	"github.com/simenandre/fiken-mcp-server/internal/fiken"
-	"github.com/simenandre/fiken-mcp-server/tools"
+	"github.com/simenandre/fiken-mcp/internal/fiken"
+	"github.com/simenandre/fiken-mcp/tools"
 )
 
 func main() {
