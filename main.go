@@ -26,10 +26,7 @@ func main() {
 			"When working with financial data, you must ensure all numbers are correct. "+
 			"Always verify amounts, quantities, and calculations either by using code to compute them or by referencing the exact values returned from the MCP tools. "+
 			"Never guess or approximate financial figures. "+
-			"IMPORTANT: All monetary values in the Fiken API are represented in the smallest currency unit. "+
-			"For Norwegian Krone (NOK), this means values are in øre (1 NOK = 100 øre). "+
-			"For example, 10000 means 100 NOK, not 10000 NOK. "+
-			"Always convert monetary values by dividing by 100 when displaying amounts to the user."),
+			"All monetary values are in NOK (Norwegian Krone)."),
 	)
 
 	tools.RegisterAll(s, client)

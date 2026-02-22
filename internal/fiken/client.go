@@ -67,6 +67,12 @@ func (c *Client) Do(method, path string, body []byte, queryParams map[string]str
 		return nil, resp.StatusCode, fmt.Errorf("reading response body: %w", err)
 	}
 
+	// Only convert monetary fields in successful responses; error responses contain
+	// diagnostic text/JSON without monetary amounts and should be forwarded as-is.
+	if resp.StatusCode < 400 {
+		respBody = ConvertMoneyFieldsFromOre(respBody)
+	}
+
 	return respBody, resp.StatusCode, nil
 }
 
@@ -77,11 +83,17 @@ func (c *Client) Get(path string, queryParams map[string]string) ([]byte, int, e
 
 // Post performs a POST request.
 func (c *Client) Post(path string, body []byte) ([]byte, int, error) {
+	if body != nil {
+		body = ConvertMoneyFieldsToOre(body)
+	}
 	return c.Do(http.MethodPost, path, body, nil)
 }
 
 // Put performs a PUT request.
 func (c *Client) Put(path string, body []byte) ([]byte, int, error) {
+	if body != nil {
+		body = ConvertMoneyFieldsToOre(body)
+	}
 	return c.Do(http.MethodPut, path, body, nil)
 }
 
