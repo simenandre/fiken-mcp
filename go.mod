@@ -1,4 +1,4 @@
-module github.com/simenandre/fiken-mcp-server
+module github.com/simenandre/fiken-mcp
 
 go 1.24.12
 
